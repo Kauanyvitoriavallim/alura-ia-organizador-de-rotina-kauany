@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROTINA DA KAU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Fundo com Bolhas 3D em Degradê de Azul -->
+    <div class="bubbles-container">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        <div class="bubble bubble-4"></div>
+        <div class="bubble bubble-5"></div>
+        <div class="bubble bubble-6"></div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="main-container">
+        <header class="header">
+            <h1 class="title">ROTINA DA KAU</h1>
+            <p class="subtitle">Organizador de Rotina Semanal (Segunda a Sexta)</p>
+        </header>
+
+        <!-- Grade 3D de Cards -->
+        <div class="grid-container">
+            
+            <!-- Card 1: Estudo & Escola -->
+            <div class="card" onclick="openModal('modal-estudo')">
+                <div class="card-inner">
+                    <div class="icon">📚</div>
+                    <h2>Estudo & Escola</h2>
+                    <span class="badge">06:00 - 12:00</span>
+                    <p>Acordo às 06h, preparação e aulas na escola até 12h.</p>
+                    <a href="estudo.html" class="card-btn" onclick="event.stopPropagation()">Ver Detalhes &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Card 2: Almoço & Transição -->
+            <div class="card" onclick="openModal('modal-saude')">
+                <div class="card-inner">
+                    <div class="icon">🥗</div>
+                    <h2>Almoço & Saúde</h2>
+                    <span class="badge">12:15 - 13:30</span>
+                    <p>Retorno para casa às 12:15, almoço e ida para o serviço.</p>
+                    <a href="saude.html" class="card-btn" onclick="event.stopPropagation()">Ver Detalhes &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Card 3: Trabalho -->
+            <div class="card" onclick="openModal('modal-trabalho')">
+                <div class="card-inner">
+                    <div class="icon">💼</div>
+                    <h2>Trabalho & Serviço</h2>
+                    <span class="badge">13:30 - 18:00</span>
+                    <p>Entrada às 13:30 e expediente presencial até as 18:00.</p>
+                    <a href="trabalho.html" class="card-btn" onclick="event.stopPropagation()">Ver Detalhes &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Card 4: Redação (Especial Quarta-feira) -->
+            <div class="card card-highlight" onclick="openModal('modal-redacao')">
+                <div class="card-inner">
+                    <div class="icon">✍️</div>
+                    <h2>Curso de Redação</h2>
+                    <span class="badge badge-special">Quartas-feiras | 18:10 - 19:00</span>
+                    <p>Após o serviço às quartas, aula de redação focada.</p>
+                    <a href="redacao.html" class="card-btn" onclick="event.stopPropagation()">Ver Detalhes &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Card 5: Lazer, Banho & Jantar -->
+            <div class="card" onclick="openModal('modal-lazer')">
+                <div class="card-inner">
+                    <div class="icon">🏡</div>
+                    <h2>Lazer, Banho & Jantar</h2>
+                    <span class="badge">18:45 em diante</span>
+                    <p>Chegada às 18:45 (ou após curso), banho, jantar e descanso.</p>
+                    <a href="lazer.html" class="card-btn" onclick="event.stopPropagation()">Ver Detalhes &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Card 6: Hobbies & Esportes -->
+            <div class="card" onclick="openModal('modal-hobby')">
+                <div class="card-inner">
+                    <div class="icon">🎨</div>
+                    <h2>Hobbies & Esportes</h2>
+                    <span class="badge">Tempo Livre</span>
+                    <p>Atividades criativas, leitura, caminhadas e bem-estar.</p>
+                    <a href="hobby.html" class="card-btn" onclick="event.stopPropagation()">Ver Detalhes &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modais Informativos -->
+    <div id="modal-estudo" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-estudo')">&times;</span>
+            <h2>📚 Estudo & Escola</h2>
+            <ul>
+                <li><strong>06:00:</strong> Acordo, higiene matutina e preparação.</li>
+                <li><strong>07:00 - 12:00:</strong> Período escolar e estudos concentrados.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-saude" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-saude')">&times;</span>
+            <h2>🥗 Almoço & Saúde</h2>
+            <ul>
+                <li><strong>12:00:</strong> Saída da escola.</li>
+                <li><strong>12:15:</strong> Chegada em casa e refeição do almoço.</li>
+                <li><strong>13:15:</strong> Deslocamento para o trabalho.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-trabalho" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-trabalho')">&times;</span>
+            <h2>💼 Trabalho & Serviço</h2>
+            <ul>
+                <li><strong>13:30:</strong> Entrada no serviço.</li>
+                <li><strong>13:30 - 18:00:</strong> Foco total nas atividades diárias de trabalho.</li>
+                <li><strong>18:00:</strong> Saída do trabalho.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-redacao" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-redacao')">&times;</span>
+            <h2>✍️ Curso de Redação (Quarta-feira)</h2>
+            <ul>
+                <li><strong>18:00:</strong> Saída direta do serviço para o curso.</li>
+                <li><strong>18:10 - 19:00:</strong> Aula presencial de Redação.</li>
+                <li><strong>19:00:</strong> Retorno direto para casa.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-lazer" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-lazer')">&times;</span>
+            <h2>🏡 Lazer, Banho & Jantar</h2>
+            <ul>
+                <li><strong>18:45 (Seg, Ter, Qui, Sex):</strong> Chegada em casa, banho e jantar reforçado.</li>
+                <li><strong>19:30 (Quarta):</strong> Chegada em casa pós-redação, banho e jantar.</li>
+                <li><strong>Noite:</strong> Descanso, séries, conversas e relaxamento.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-hobby" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-hobby')">&times;</span>
+            <h2>🎨 Hobbies, Esportes & Saúde</h2>
+            <ul>
+                <li><strong>Esportes:</strong> Caminhadas nos deslocamentos diários.</li>
+                <li><strong>Hobbies:</strong> Leitura e momentos criativos no período da noite/fins de semana.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- JavaScript Integrado no HTML -->
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = 'flex';
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+
+        // Fechar o modal ao clicar fora da janela
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
